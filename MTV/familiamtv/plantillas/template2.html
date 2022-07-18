@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi primer MTV Pistolesi</title>
+</head>
+<body>
+    <h1>Mi familia</h1>
+
+    <h3>Mi familia se compone por:</h3>
+
+    <p>
+    {% for miembros in nombress %}
+        
+        <p style="color:rgb(14, 14, 15)">{{miembros}}</p>
+        
+    {% endfor %}
+
+    </p>
+
+    <p style="color:rgb(243, 216, 66)"<h3>Aprende a hacer esto y mucho más en <a target="_blank" href="https://www.coderhouse.com/">Coder House</a></h3></p>
+    <img src="data:image/png;base64,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"
+
+
+
+    
+
+</body>
+</html>
