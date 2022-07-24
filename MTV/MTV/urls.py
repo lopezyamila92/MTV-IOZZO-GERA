@@ -17,11 +17,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from familiamtv.views import comosellaman, familia, familiaplantilla
+from familiamtv.views import comosellaman, familia, familiaplantilla, lista_familia
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("ingrese-datos/<nombree>/<parentezco>/<edad>/",familia),
     path("miembros",comosellaman),
-    path("ingrese/<apado>/<relacion>/<anos>/",familiaplantilla),
+    path("ingrese/<apado>/<relacion>/<anos>/<cumpleanos>",familiaplantilla),
+    path("listafamilia",lista_familia),
 ]

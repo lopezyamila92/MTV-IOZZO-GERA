@@ -6,24 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi primer MTV Iozzolino</title>
 </head>
-<body>
+<body style="background-color:rgb(41, 172, 148);"> 
+    
     <h1>Mi familia</h1>
 
-    <h3>Mi familia se compone por:</h3>
-
-    <p>
-    {% for miembros in nombress %}
+    <ul>
         
-        <p style="color:rgb(14, 14, 15)">{{miembros}}</p>
-        
-    {% endfor %}
-
-    </p>
-
+        {% for personas in familialista %}
+            <li>{{personas.nombre}} - Vínculo {{personas.parentezco}} - Edad {{personas.edad}}  - Fecha de nacimiento {{personas.fecha_nacimiento}} </li>
+        {% endfor %}
     
-
-
-    
-
+    </ul>
 </body>
 </html>
